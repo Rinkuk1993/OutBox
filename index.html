@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+
+	<script src="Resources/ExtLibs/jquery.min.js" type="text/javascript" ></script>
+  <script src="Resources/ExtLibs/angular.js" type="text/javascript" ></script>
+  <script src="Resources/ExtLibs/bootstrap.js" type="text/javascript" ></script>
+  <script src="Resources/ExtLibs/ng-route.js" type="text/javascript" ></script>
+    
+  </head>
+  <body ng-app="OutboxApp">
+    <div class="header">
+      <div class="container">
+        <img src="img/logo.jpg" width="140" height="150">
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container">
+		<div ng-view></div>
+      </div>
+    </div>
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/HomeController.js"></script>
+    <script src="js/controllers/EmailController.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/emails.js"></script>
+  </body>
+</html>
