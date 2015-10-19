@@ -1,5 +1,5 @@
 app.factory('emails', ['$http', function($http) {
-  return $http.get('http://localhost:5000/data')
+  return $http.get('/data')
             .success(function(data) {
               return data;
             })
