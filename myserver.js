@@ -16,7 +16,9 @@ app.use(bodyParser.json());
 
 
 //Server
-var server = app.listen(34343, '127.0.0.1', function () {
+app.set('port', (process.env.PORT || 5000));
+
+var server = app.listen(app.get('port'), 'localhost', function () {
 
 	var host = server.address().address;
 	var port = server.address().port;
