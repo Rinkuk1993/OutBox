@@ -1,0 +1,30 @@
+{
+  "name": "outbox",
+  "version": "1.0.0",
+  "description": "Simple email outbox app",
+  "main": "myserver.js",
+  "dependencies": {
+    "path": "^0.12.7",
+    "express": "^4.13.3",
+    "body-parser": "^1.14.1",
+    "cors": "^2.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node myserver.js"
+  },
+  "engine": "node >= 0.4.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rinkuk1993/OutBox.git"
+  },
+  "keywords": [
+    "outbox"
+  ],
+  "author": "Rinku Kumari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rinkuk1993/OutBox/issues"
+  },
+  "homepage": "https://github.com/Rinkuk1993/OutBox#readme"
+}

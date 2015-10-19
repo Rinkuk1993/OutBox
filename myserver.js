@@ -4,43 +4,43 @@ var fs = require("fs");
 
 var bodyParser=require('body-parser');
 
+//for reading local email.json file
 var cors = require('cors')
 
-app.use(cors())
+app.use(cors());
 
 app.use(bodyParser.urlencoded({
-  extended: true
+	extended: true
 }));
 app.use(bodyParser.json());
 
 
+//Server
 var server = app.listen(34343, '127.0.0.1', function () {
 
-  var host = server.address().address;
-  var port = server.address().port;
+	var host = server.address().address;
+	var port = server.address().port;
 
-  console.log('Example app listening at http://%s:%s', host, port)
+	console.log('Example app listening at http://%s:%s', host, port)
 
 })
 
+/*Home page*/
 app.get('/', function (req, res) {
-  res.sendFile(__dirname +'/index.html');
+	res.sendFile(__dirname +'/index.html');
 })
 
-/*Login Credentials check*/
+/*Data Retrieve*/
 app.get('/data', function (req, res) {
-
- var fileName = "emails.json";
- fs.readFile(fileName, "utf8", function(error, data){
-console.log(data+"\n");
-  res.write(data);
-  res.end();
-});
- //console.log("here2");
+	var fileName = "emails.json";
+	fs.readFile(fileName, "utf8", function(error, data){
+		res.write(data);
+		res.end();
+	});
 });
 
 /* serves all the static files */
 app.get(/^(.+)$/, function(req, res){
-  res.sendFile( __dirname + req.params[0]); 
+	res.sendFile( __dirname + req.params[0]); 
 });
 
