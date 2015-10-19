@@ -7,6 +7,8 @@ var bodyParser=require('body-parser');
 //for reading local email.json file
 var cors = require('cors')
 
+app.use(express.static(__dirname + '/public'));
+
 app.use(cors());
 
 app.use(bodyParser.urlencoded({
